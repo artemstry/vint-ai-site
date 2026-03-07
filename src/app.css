@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+	--bg-primary: #05060b;
+	--bg-secondary: #0b1020;
+	--bg-surface: #101a2f;
+	--text-primary: #ecf2ff;
+	--text-muted: #98a9cc;
+	--accent: #2dd4ff;
+	--accent-alt: #7c8eff;
+	--border: rgba(88, 121, 203, 0.28);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	min-height: 100%;
+	background:
+		radial-gradient(circle at 20% 10%, rgba(38, 70, 160, 0.3), transparent 45%),
+		radial-gradient(circle at 90% 0%, rgba(45, 212, 255, 0.15), transparent 32%),
+		var(--bg-primary);
+	color: var(--text-primary);
+	font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Space Grotesk', sans-serif;
+	letter-spacing: -0.01em;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.container {
+	margin-inline: auto;
+	width: min(1120px, calc(100% - 2rem));
+}
+
+.section {
+	padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.section-title {
+	font-size: clamp(2rem, 4vw, 3rem);
+	font-weight: 700;
+	line-height: 1.12;
+}
+
+.section-eyebrow {
+	color: var(--accent);
+	font-size: 0.82rem;
+	font-weight: 700;
+	letter-spacing: 0.17em;
+	text-transform: uppercase;
+}
+
+.glass {
+	background: linear-gradient(145deg, rgba(16, 26, 47, 0.78), rgba(8, 13, 24, 0.74));
+	border: 1px solid var(--border);
+	backdrop-filter: blur(12px);
+}
