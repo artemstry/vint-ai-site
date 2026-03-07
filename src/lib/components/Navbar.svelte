@@ -29,7 +29,7 @@
 
 		<a
 			href="/get-started"
-			class="hidden rounded-full bg-[#d95262] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#e06272] md:inline-flex"
+			class="hidden rounded-full bg-[#9f263b] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#b7334b] md:inline-flex"
 		>
 			Talk to us
 		</a>
