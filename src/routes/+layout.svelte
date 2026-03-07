@@ -13,7 +13,7 @@
 	<meta property="og:title" content="VINT.AI - Solve Data and AI" />
 	<meta property="og:description" content="Modern data and AI consulting for cloud analytics, governance, and scalable delivery." />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="/logos/vint-logo.png" />
+	<meta property="og:image" content="/logos/vint-logo.svg" />
 </svelte:head>
 
 <div class="min-h-screen">

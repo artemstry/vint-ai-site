@@ -26,7 +26,7 @@
 </script>
 
 <div bind:this={root} class="glass rounded-2xl p-6 text-center">
-	<p class="font-['Space_Grotesk'] text-4xl font-bold text-cyan-300">
+	<p class="font-['Space_Grotesk'] text-4xl font-bold text-[#ff8e96]">
 		{format($animated)}{suffix}
 	</p>
 	<p class="mt-2 text-sm text-slate-300">{label}</p>

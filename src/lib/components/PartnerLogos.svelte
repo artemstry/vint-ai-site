@@ -3,7 +3,7 @@
 	const ticker = $derived([...logos, ...logos]);
 </script>
 
-<div class="overflow-hidden rounded-2xl border border-white/10 bg-[#080f1f]/80 py-5">
+<div class="overflow-hidden rounded-2xl border border-[#ff8e96]/20 bg-[#080f1f]/80 py-4">
 	<div class="ticker-track">
 		{#each ticker as logo, idx}
 			<div class="ticker-item" aria-hidden={idx >= logos.length}>
@@ -16,23 +16,24 @@
 <style>
 	.ticker-track {
 		display: flex;
-		gap: 3rem;
+		gap: 2.2rem;
 		width: max-content;
-		animation: slide 24s linear infinite;
+		animation: slide 20s linear infinite;
 	}
 
 	.ticker-item {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		min-width: 120px;
-		opacity: 0.8;
-		filter: grayscale(1) brightness(1.2);
+		min-width: 104px;
+		opacity: 0.92;
+		filter: saturate(0.95) brightness(1.06);
 	}
 
 	.ticker-item img {
-		height: 28px;
+		height: 24px;
 		width: auto;
+		border-radius: 6px;
 	}
 
 	@keyframes slide {

@@ -9,8 +9,7 @@
 <header class="sticky top-0 z-50 border-b border-white/10 bg-[#05060bcc] backdrop-blur-lg">
 	<div class="container flex h-18 items-center justify-between gap-4">
 		<a href="/" class="flex items-center gap-3 font-semibold tracking-wide">
-			<img src="/logos/vint-icon.png" alt="Vint AI icon" class="h-9 w-9 rounded-md" />
-			<span class="font-['Space_Grotesk'] text-lg">VINT.AI</span>
+			<img src="/logos/vint-logo.svg" alt="VINT.AI logo" class="h-12 w-auto" />
 		</a>
 
 		<nav class="hidden items-center gap-7 md:flex">
@@ -19,8 +18,8 @@
 					href={item.href}
 					class={`text-sm transition-colors duration-200 ${
 						page.url.pathname === item.href
-							? 'text-cyan-300'
-							: 'text-slate-300 hover:text-cyan-200'
+							? 'text-[#ff8e96]'
+							: 'text-slate-300 hover:text-[#ff9ea6]'
 					}`}
 				>
 					{item.label}
@@ -30,7 +29,7 @@
 
 		<a
 			href="/get-started"
-			class="hidden rounded-full bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300 md:inline-flex"
+			class="hidden rounded-full bg-[#d95262] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#e06272] md:inline-flex"
 		>
 			Talk to us
 		</a>

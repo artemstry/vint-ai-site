@@ -28,7 +28,7 @@
 					<input
 						required
 						name="firstName"
-						class="w-full rounded-lg border border-white/15 bg-slate-950/40 px-4 py-2.5 text-slate-100 outline-none ring-cyan-300 transition focus:ring-2"
+						class="w-full rounded-lg border border-white/15 bg-slate-950/40 px-4 py-2.5 text-slate-100 outline-none ring-[#ff8e96] transition focus:ring-2"
 					/>
 				</label>
 				<label class="space-y-2 text-sm">
@@ -36,7 +36,7 @@
 					<input
 						required
 						name="lastName"
-						class="w-full rounded-lg border border-white/15 bg-slate-950/40 px-4 py-2.5 text-slate-100 outline-none ring-cyan-300 transition focus:ring-2"
+						class="w-full rounded-lg border border-white/15 bg-slate-950/40 px-4 py-2.5 text-slate-100 outline-none ring-[#ff8e96] transition focus:ring-2"
 					/>
 				</label>
 			</div>
@@ -47,7 +47,7 @@
 						required
 						type="email"
 						name="email"
-						class="w-full rounded-lg border border-white/15 bg-slate-950/40 px-4 py-2.5 text-slate-100 outline-none ring-cyan-300 transition focus:ring-2"
+						class="w-full rounded-lg border border-white/15 bg-slate-950/40 px-4 py-2.5 text-slate-100 outline-none ring-[#ff8e96] transition focus:ring-2"
 					/>
 				</label>
 				<label class="space-y-2 text-sm">
@@ -55,7 +55,7 @@
 					<input
 						required
 						name="company"
-						class="w-full rounded-lg border border-white/15 bg-slate-950/40 px-4 py-2.5 text-slate-100 outline-none ring-cyan-300 transition focus:ring-2"
+						class="w-full rounded-lg border border-white/15 bg-slate-950/40 px-4 py-2.5 text-slate-100 outline-none ring-[#ff8e96] transition focus:ring-2"
 					/>
 				</label>
 			</div>
@@ -65,7 +65,7 @@
 					required
 					name="message"
 					rows="5"
-					class="w-full rounded-lg border border-white/15 bg-slate-950/40 px-4 py-3 text-slate-100 outline-none ring-cyan-300 transition focus:ring-2"
+					class="w-full rounded-lg border border-white/15 bg-slate-950/40 px-4 py-3 text-slate-100 outline-none ring-[#ff8e96] transition focus:ring-2"
 				></textarea>
 			</label>
 
@@ -78,7 +78,7 @@
 
 			<button
 				type="submit"
-				class="mt-6 rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+				class="mt-6 rounded-full bg-[#d95262] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#e06272]"
 			>
 				Submit
 			</button>

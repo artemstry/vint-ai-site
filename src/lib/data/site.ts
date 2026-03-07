@@ -34,11 +34,12 @@ export const services = [
 ];
 
 export const partnerLogos = [
+	{ src: '/logos/partner-a.png', alt: 'Original partner logo A' },
+	{ src: '/logos/partner-b.png', alt: 'Original partner logo B' },
+	{ src: '/logos/partner-c.png', alt: 'Original partner logo C' },
 	{ src: '/logos/databricks.svg', alt: 'Databricks logo' },
 	{ src: '/logos/snowflake.svg', alt: 'Snowflake logo' },
-	{ src: '/logos/googlecloud.svg', alt: 'Google Cloud logo' },
-	{ src: '/logos/docker.svg', alt: 'Docker logo' },
-	{ src: '/logos/kubernetes.svg', alt: 'Kubernetes logo' }
+	{ src: '/logos/googlecloud.svg', alt: 'Google Cloud logo' }
 ];
 
 export const stats = [

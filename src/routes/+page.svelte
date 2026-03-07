@@ -12,39 +12,50 @@
 </svelte:head>
 
 <section class="relative overflow-hidden border-b border-white/10 py-22 md:py-28">
+	<div class="absolute inset-0">
+		<div
+			class="h-full w-full bg-cover bg-center opacity-38"
+			style="background-image: url('/hero-bg.jpg');"
+		></div>
+		<div class="absolute inset-0 bg-[#07090f]/68"></div>
+	</div>
 	<HeroAnimation />
-	<div class="container relative z-10 grid items-center gap-10 md:grid-cols-[1.2fr_0.8fr]">
+	<div class="container relative z-10 grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr]">
 		<div>
-			<p class="section-eyebrow">Solve Data and AI</p>
-			<h1 class="mt-4 text-4xl font-bold leading-tight md:text-6xl">
-				Your vision, engineered into modern data systems.
+			<p class="section-eyebrow text-base md:text-lg">Solve Data and AI</p>
+			<h1 class="mt-3 text-5xl font-bold leading-tight md:text-7xl">
+				Operationalize AI across the enterprise.
 			</h1>
 			<p class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">
-				VINT.AI helps enterprises accelerate cloud analytics, governance, and AI operations with
-				expert-led delivery and measurable outcomes.
+				We build the machine-accessible layer that connects your data, tools, and workflows so AI can
+				execute reliably in production.
+			</p>
+			<p class="mt-3 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">
+				From customer service automation to governed enterprise copilots, we turn AI strategy into
+				operational systems.
 			</p>
 			<div class="mt-9 flex flex-wrap items-center gap-3">
 				<a
 					href="/get-started"
-					class="rounded-full bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+					class="rounded-full bg-[#d95262] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#e06272]"
 				>
 					Get Started
 				</a>
 				<a
 					href="/solutions"
-					class="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-200 hover:text-cyan-200"
+					class="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-[#ff9ea6] hover:text-[#ffb1b8]"
 				>
 					Explore Solutions
 				</a>
 			</div>
 		</div>
 		<div class="glass rounded-3xl p-6 md:p-8">
-			<p class="text-sm uppercase tracking-[0.18em] text-cyan-300">Why Teams Choose VINT.AI</p>
+			<p class="text-sm uppercase tracking-[0.18em] text-[#ff9ea6]">Why Teams Choose VINT.AI</p>
 			<ul class="mt-4 space-y-4 text-sm text-slate-200">
-				<li class="border-b border-white/10 pb-3">Full-lifecycle data and AI consulting</li>
-				<li class="border-b border-white/10 pb-3">Enterprise-grade governance and compliance</li>
-				<li class="border-b border-white/10 pb-3">Faster delivery without quality trade-offs</li>
-				<li>Senior practitioners with 15+ years experience</li>
+				<li class="border-b border-white/10 pb-3">Production AI operating model, not just pilots</li>
+				<li class="border-b border-white/10 pb-3">Customer service automation and agent workflows</li>
+				<li class="border-b border-white/10 pb-3">Machine-accessible systems with governed data access</li>
+				<li>Senior architects with 15+ years of enterprise delivery</li>
 			</ul>
 		</div>
 	</div>
@@ -124,7 +135,7 @@
 		<ScrollReveal>
 			{#snippet children()}
 				<div class="glass rounded-2xl p-6">
-					<p class="text-sm uppercase tracking-[0.15em] text-cyan-300">Leadership DNA</p>
+					<p class="text-sm uppercase tracking-[0.15em] text-[#ff9ea6]">Leadership DNA</p>
 					<p class="mt-4 text-sm leading-relaxed text-slate-300">
 						Every delivery stream is guided by architects with 15+ years in technology and computer
 						science, driving measurable outcomes in regulated industries.
@@ -144,7 +155,7 @@
 			</h2>
 			<a
 				href="/get-started"
-				class="mt-7 inline-flex rounded-full bg-cyan-400 px-8 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+				class="mt-7 inline-flex rounded-full bg-[#d95262] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#e06272]"
 			>
 				Start the conversation
 			</a>
