@@ -1,8 +1,11 @@
 <script lang="ts">
 	import '../app.css';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import ChatWidget from '$lib/components/ChatWidget.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
+
+	injectAnalytics();
 
 	let { children } = $props();
 </script>
