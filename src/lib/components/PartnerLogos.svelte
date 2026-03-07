@@ -7,7 +7,7 @@
 	<div class="ticker-track">
 		{#each ticker as logo, idx}
 			<div class="ticker-item" aria-hidden={idx >= logos.length}>
-				<img src={logo.src} alt={logo.alt} loading="lazy" />
+				<img src={logo.src} alt={logo.alt} loading="lazy" decoding="async" width="64" height="24" />
 			</div>
 		{/each}
 	</div>

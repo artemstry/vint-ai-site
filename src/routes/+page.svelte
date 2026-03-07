@@ -37,7 +37,7 @@
 			<div class="mt-9 flex flex-wrap items-center gap-3">
 				<a
 					href="/get-started"
-					class="rounded-full bg-[#d95262] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#e06272]"
+					class="rounded-full bg-[#9f263b] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#b7334b]"
 				>
 					Get Started
 				</a>
@@ -155,7 +155,7 @@
 			</h2>
 			<a
 				href="/get-started"
-				class="mt-7 inline-flex rounded-full bg-[#d95262] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#e06272]"
+				class="mt-7 inline-flex rounded-full bg-[#9f263b] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#b7334b]"
 			>
 				Start the conversation
 			</a>
