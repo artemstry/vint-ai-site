@@ -88,7 +88,20 @@
 >
 	<div class="solutions-photo-bg" style={`background-image: url('${solutionsHeroBg}');`} aria-hidden="true"></div>
 	<div class="particles-bg" aria-hidden="true"></div>
-	<HeroAnimation />
+	<HeroAnimation
+		points={420}
+		particleSize={0.125}
+		particleOpacity={0.96}
+		canvasOpacity={0.98}
+		speedMultiplier={1.15}
+		attractToPointer={true}
+		attractStrength={0.0022}
+		chaos={0.00025}
+		cameraDistance={16}
+		fitViewport={true}
+		viewportWidthFactor={1.02}
+		viewportHeightFactor={0.75}
+	/>
 	<div class="container relative z-10">
 		<ScrollReveal>
 			{#snippet children()}

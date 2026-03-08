@@ -13,7 +13,10 @@
 		spreadX = 18,
 		spreadY = 8,
 		spreadZ = 6,
-		cameraDistance = 16
+		cameraDistance = 16,
+		fitViewport = false,
+		viewportWidthFactor = 1,
+		viewportHeightFactor = 0.72
 	}: {
 		points?: number;
 		particleSize?: number;
@@ -27,6 +30,9 @@
 		spreadY?: number;
 		spreadZ?: number;
 		cameraDistance?: number;
+		fitViewport?: boolean;
+		viewportWidthFactor?: number;
+		viewportHeightFactor?: number;
 	} = $props();
 
 	let container: HTMLDivElement;
@@ -50,12 +56,24 @@
 			const pointCount = Math.max(40, Math.floor(points));
 			const motionBoost = Math.max(0.2, speedMultiplier);
 			const noise = Math.max(0, chaos);
-			const xRange = Math.max(4, spreadX);
-			const yRange = Math.max(2, spreadY);
-			const zRange = Math.max(1, spreadZ);
+			let xRange = Math.max(4, spreadX);
+			let yRange = Math.max(2, spreadY);
+			let zRange = Math.max(1, spreadZ);
 			const geometry = new THREE.BufferGeometry();
 			const positions = new Float32Array(pointCount * 3);
 			const velocities = new Float32Array(pointCount * 3);
+
+			const updateRangesFromViewport = () => {
+				if (!fitViewport) return;
+				const fovRad = (camera.fov * Math.PI) / 180;
+				const visibleHeight = 2 * Math.tan(fovRad * 0.5) * camera.position.z;
+				const visibleWidth = visibleHeight * camera.aspect;
+				xRange = Math.max(4, visibleWidth * Math.max(0.5, viewportWidthFactor));
+				yRange = Math.max(2, visibleHeight * Math.max(0.3, viewportHeightFactor));
+				zRange = Math.max(1, spreadZ);
+			};
+
+			updateRangesFromViewport();
 
 			for (let i = 0; i < pointCount; i++) {
 				const i3 = i * 3;
@@ -81,6 +99,7 @@
 				const { clientWidth, clientHeight } = container;
 				camera.aspect = clientWidth / clientHeight;
 				camera.updateProjectionMatrix();
+				updateRangesFromViewport();
 				renderer.setSize(clientWidth, clientHeight);
 			};
 			resize();
