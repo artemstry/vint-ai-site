@@ -90,7 +90,7 @@
 	<div class="particles-bg" aria-hidden="true"></div>
 	<HeroAnimation
 		points={420}
-		particleSize={0.125}
+		particleSize={0.16}
 		particleOpacity={0.96}
 		canvasOpacity={0.98}
 		speedMultiplier={1.15}
@@ -99,8 +99,9 @@
 		chaos={0.00025}
 		cameraDistance={16}
 		fitViewport={true}
-		viewportWidthFactor={1.02}
-		viewportHeightFactor={0.75}
+		viewportWidthFactor={1.24}
+		viewportHeightFactor={0.96}
+		spreadZ={8}
 	/>
 	<div class="container relative z-10">
 		<ScrollReveal>
