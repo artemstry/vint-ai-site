@@ -5,6 +5,13 @@
 	import ServiceCard from '$lib/components/ServiceCard.svelte';
 	import StatsCounter from '$lib/components/StatsCounter.svelte';
 	import { partnerLogos, services, stats } from '$lib/data/site';
+
+const frontHeroBg =
+	'https://static.wixstatic.com/media/c837a6_d11c6c437c0f4feb9de8591b42ead168~mv2.jpg/v1/fill/w_4040,h_1439,al_c,q_90,enc_avif,quality_auto/c837a6_d11c6c437c0f4feb9de8591b42ead168~mv2.jpg';
+const servicesBg =
+	'https://static.wixstatic.com/media/c837a6_41aece62e57346379d12018aece18ea2~mv2.jpg/v1/fill/w_1950,h_2306,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_41aece62e57346379d12018aece18ea2~mv2.jpg';
+const ctaBg =
+	'https://static.wixstatic.com/media/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg/v1/fill/w_3495,h_2160,al_c,q_90,enc_avif,quality_auto/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg';
 </script>
 
 <svelte:head>
@@ -15,7 +22,7 @@
 	<div class="absolute inset-0">
 		<div
 			class="h-full w-full bg-cover bg-center opacity-38"
-			style="background-image: url('/hero-bg.jpg');"
+			style={`background-image: url('${frontHeroBg}');`}
 		></div>
 		<div class="absolute inset-0 bg-[#07090f]/68"></div>
 	</div>
@@ -75,7 +82,11 @@
 	</div>
 </section>
 
-<section class="section border-y border-white/10 bg-[#060d1b]/55">
+<section class="relative section overflow-hidden border-y border-white/10 bg-[#060d1b]/55">
+	<div class="absolute inset-0">
+		<div class="home-photo-layer home-photo-layer-services" style={`background-image: url('${servicesBg}');`}></div>
+		<div class="absolute inset-0 bg-[#060d1b]/76"></div>
+	</div>
 	<div class="container space-y-10">
 		<ScrollReveal>
 			{#snippet children()}
@@ -146,7 +157,11 @@
 	</div>
 </section>
 
-<section class="section">
+<section class="relative section overflow-hidden">
+	<div class="absolute inset-0">
+		<div class="home-photo-layer home-photo-layer-cta" style={`background-image: url('${ctaBg}');`}></div>
+		<div class="absolute inset-0 bg-[#07090f]/74"></div>
+	</div>
 	<div class="container">
 		<div class="glass rounded-3xl p-8 text-center md:p-12">
 			<p class="section-eyebrow">Ready to Accelerate?</p>
@@ -162,3 +177,24 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	.home-photo-layer {
+		position: absolute;
+		inset: -8%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		filter: saturate(1.08);
+	}
+
+	.home-photo-layer-services {
+		opacity: 0.26;
+		transform: scale(1.06);
+	}
+
+	.home-photo-layer-cta {
+		opacity: 0.28;
+		transform: scale(1.03);
+	}
+</style>
