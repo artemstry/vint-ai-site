@@ -9,7 +9,11 @@
 		speedMultiplier = 1,
 		attractToPointer = false,
 		attractStrength = 0.0022,
-		chaos = 0.00024
+		chaos = 0.00024,
+		spreadX = 18,
+		spreadY = 8,
+		spreadZ = 6,
+		cameraDistance = 16
 	}: {
 		points?: number;
 		particleSize?: number;
@@ -19,6 +23,10 @@
 		attractToPointer?: boolean;
 		attractStrength?: number;
 		chaos?: number;
+		spreadX?: number;
+		spreadY?: number;
+		spreadZ?: number;
+		cameraDistance?: number;
 	} = $props();
 
 	let container: HTMLDivElement;
@@ -33,7 +41,7 @@
 
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
-			camera.position.z = 16;
+			camera.position.z = Math.max(8, cameraDistance);
 
 			const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 			renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -42,15 +50,18 @@
 			const pointCount = Math.max(40, Math.floor(points));
 			const motionBoost = Math.max(0.2, speedMultiplier);
 			const noise = Math.max(0, chaos);
+			const xRange = Math.max(4, spreadX);
+			const yRange = Math.max(2, spreadY);
+			const zRange = Math.max(1, spreadZ);
 			const geometry = new THREE.BufferGeometry();
 			const positions = new Float32Array(pointCount * 3);
 			const velocities = new Float32Array(pointCount * 3);
 
 			for (let i = 0; i < pointCount; i++) {
 				const i3 = i * 3;
-				positions[i3] = (Math.random() - 0.5) * 18;
-				positions[i3 + 1] = (Math.random() - 0.5) * 8;
-				positions[i3 + 2] = (Math.random() - 0.5) * 6;
+				positions[i3] = (Math.random() - 0.5) * xRange;
+				positions[i3 + 1] = (Math.random() - 0.5) * yRange;
+				positions[i3 + 2] = (Math.random() - 0.5) * zRange;
 				velocities[i3] = (Math.random() - 0.5) * 0.008 * motionBoost;
 				velocities[i3 + 1] = (Math.random() - 0.5) * 0.008 * motionBoost;
 				velocities[i3 + 2] = (Math.random() - 0.5) * 0.004 * motionBoost;
@@ -81,8 +92,8 @@
 				if (rect.width <= 0 || rect.height <= 0) return;
 				const nx = (event.clientX - rect.left) / rect.width;
 				const ny = (event.clientY - rect.top) / rect.height;
-				pointer.x = (nx * 2 - 1) * 8.8;
-				pointer.y = -(ny * 2 - 1) * 4.6;
+				pointer.x = (nx * 2 - 1) * (xRange * 0.48);
+				pointer.y = -(ny * 2 - 1) * (yRange * 0.48);
 				pointer.active = nx >= 0 && nx <= 1 && ny >= 0 && ny <= 1;
 			};
 			const handlePointerLeave = () => {
@@ -119,9 +130,9 @@
 					pos[i3 + 1] += velocities[i3 + 1];
 					pos[i3 + 2] += velocities[i3 + 2];
 
-					if (Math.abs(pos[i3]) > 9) velocities[i3] *= -1;
-					if (Math.abs(pos[i3 + 1]) > 4.6) velocities[i3 + 1] *= -1;
-					if (Math.abs(pos[i3 + 2]) > 3.4) velocities[i3 + 2] *= -1;
+					if (Math.abs(pos[i3]) > xRange * 0.5) velocities[i3] *= -1;
+					if (Math.abs(pos[i3 + 1]) > yRange * 0.5) velocities[i3 + 1] *= -1;
+					if (Math.abs(pos[i3 + 2]) > zRange * 0.57) velocities[i3 + 2] *= -1;
 				}
 
 				geometry.attributes.position.needsUpdate = true;

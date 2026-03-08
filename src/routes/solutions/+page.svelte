@@ -89,14 +89,18 @@
 	<div class="solutions-photo-bg" style={`background-image: url('${solutionsHeroBg}');`} aria-hidden="true"></div>
 	<div class="particles-bg" aria-hidden="true"></div>
 	<HeroAnimation
-		points={320}
-		particleSize={0.095}
-		particleOpacity={0.96}
+		points={560}
+		particleSize={0.102}
+		particleOpacity={0.9}
 		canvasOpacity={0.95}
 		speedMultiplier={1.35}
 		attractToPointer={true}
 		attractStrength={0.0027}
-		chaos={0.0003}
+		chaos={0.00034}
+		spreadX={34}
+		spreadY={18}
+		spreadZ={10}
+		cameraDistance={30}
 	/>
 	<div class="container relative z-10">
 		<ScrollReveal>
@@ -170,7 +174,7 @@
 	.particles-bg::before {
 		content: '';
 		position: absolute;
-		inset: 0;
+		inset: -12% -6%;
 		background:
 			radial-gradient(circle at 7% 20%, rgba(233, 101, 116, 0.58) 1px, transparent 2px),
 			radial-gradient(circle at 12% 67%, rgba(178, 189, 214, 0.38) 1px, transparent 2px),
