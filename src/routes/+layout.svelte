@@ -1,11 +1,13 @@
 <script lang="ts">
 	import '../app.css';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import ChatWidget from '$lib/components/ChatWidget.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 
 	injectAnalytics();
+	injectSpeedInsights();
 
 	let { children } = $props();
 </script>
