@@ -88,20 +88,7 @@
 >
 	<div class="solutions-photo-bg" style={`background-image: url('${solutionsHeroBg}');`} aria-hidden="true"></div>
 	<div class="particles-bg" aria-hidden="true"></div>
-	<HeroAnimation
-		points={560}
-		particleSize={0.102}
-		particleOpacity={0.9}
-		canvasOpacity={0.95}
-		speedMultiplier={1.35}
-		attractToPointer={true}
-		attractStrength={0.0027}
-		chaos={0.00034}
-		spreadX={34}
-		spreadY={18}
-		spreadZ={10}
-		cameraDistance={30}
-	/>
+	<HeroAnimation />
 	<div class="container relative z-10">
 		<ScrollReveal>
 			{#snippet children()}
@@ -174,7 +161,7 @@
 	.particles-bg::before {
 		content: '';
 		position: absolute;
-		inset: -12% -6%;
+		inset: -4%;
 		background:
 			radial-gradient(circle at 7% 20%, rgba(233, 101, 116, 0.58) 1px, transparent 2px),
 			radial-gradient(circle at 12% 67%, rgba(178, 189, 214, 0.38) 1px, transparent 2px),
@@ -187,7 +174,8 @@
 			radial-gradient(circle at 74% 78%, rgba(236, 130, 142, 0.46) 1.2px, transparent 2.4px),
 			radial-gradient(circle at 83% 37%, rgba(182, 191, 212, 0.34) 1px, transparent 2.1px),
 			radial-gradient(circle at 92% 52%, rgba(224, 99, 113, 0.52) 1.1px, transparent 2.2px);
-		opacity: 0.52;
+		opacity: 0.18;
+		filter: blur(0.3px);
 		animation: driftChaos 16s ease-in-out infinite alternate;
 	}
 
